@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --text-dark:#171717;
+    --text-light:#525252;
+    --extra-light:#a3a3a3;
+    --white:#ffffff;
+    --max-width: 1200px;
+    --header-font: "Merriweather", serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--header-font);
+    background: #ECE9E6;
+    background: -webkit-linear-gradient(to left, #FFFFFF, #ECE9E6);
+    background: linear-gradient(to left, #FFFFFF, #ECE9E6);
+
+}
+
+.contact-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.contact-left-title h2{
+    font-weight: 600;
+    color: var(--text-dark);
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.contact-left-title hr{
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: var(--text-dark);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-inputs{
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: var(--text-light);
+    border-radius: 50px;
+}
+
+.contact-left textarea{
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.contact-inputs:focus{
+    border: 2px solid var(--text-light);
+}
+
+.contact-inputs::placeholder{
+    color: var(--extra-light);
+}
+
+.contact-left button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: var(--white);
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: #232526;
+    background: -webkit-linear-gradient(270deg, #414345, #232526);
+    background: linear-gradient(270deg, #414345, #232526);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.contact-left button:hover{
+    transform: scale(1.05);
+}
+
+.contact-left button img{
+    height: 15px;
+}
+
+.contact-right img{
+    border-radius: 50%;
+}
+
+@media (max-width:800px){
+    .contact-inputs{
+        width: 80vw;
+    }
+    .contact-right{
+        display: none;
+    }
+}
